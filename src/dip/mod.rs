@@ -33,6 +33,7 @@ impl<T: UserRepository> UserService<T> {
             println!("> Registered user id: {}", user.id);
             Ok(())
         } else {
+            println!("> User already exists");
             Err("User already exists".into())
         }
     }
